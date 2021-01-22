@@ -1,3 +1,1 @@
-# Andy Bowskill Website
-
-My personal projects website.
+# Andy Bowskill
