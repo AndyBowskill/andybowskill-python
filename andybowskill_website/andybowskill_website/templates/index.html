@@ -1,14 +1,48 @@
 {% extends 'base.html' %}
 
-{% block title %}Andy Bowskill{% endblock %}
+{% load static %}
+
+{% block title %}Andy Bowskill | Software Developer | South-West, UK{% endblock %}
 
 {% block content %}
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
+  <nav class="navbar navbar-dark bg-dark static-top">
     <div class="container">
       <a class="navbar-brand" href="#">Andy Bowskill</a>
     </div>
   </nav>
+
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="mx-auto mb-3 mb-lg-0 mb-lg-3">
+              <h3>I'm Andy, a software developer with 10 plus years of real-life experience.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-2">
+            <div class="mx-auto mb-3 mb-lg-0 mb-lg-3">
+              <p class="lead mb-0">I worked as a lead programmer in a Nasdaq listed company developing vehicle dealership software previously. I was the lead programmer and looking after 3 scrum teams, each team situated in Berkshire in the UK, Oulu in Finland and Hyderabad in India.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="mx-auto mb-3 mb-lg-0 mb-lg-3">
+              <img src="{% static 'img/avatar.png' %}"></img>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="mx-auto mb-3 mb-lg-0 mb-lg-3">
+              <p class="lead mb-0">Please feel free to <a href="mailto:andybowskill@protonmail.com">email me (andybowskill@protonmail.com)</a> and check out <a href="https://github.com/AndyBowskill">my GitHub</a> code repository.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   
 {% endblock %}
