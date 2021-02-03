@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Andy Bowskill | Software Developer | South-West, UK{% endblock %}
+
+{% load markdown_extras %}
+
+{% block content %}
+
+      <section class="features-icons">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                {{ blog.title }}
+            </div>
+            <div class="col-lg-8 offset-lg-2">
+                {{ blog.content | markdown | safe }}                    
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}
