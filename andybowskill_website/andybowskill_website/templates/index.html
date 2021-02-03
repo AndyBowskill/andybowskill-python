@@ -6,12 +6,6 @@
 
 {% block content %}
 
-  <nav class="navbar navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Andy Bowskill</a>
-    </div>
-  </nav>
-
     <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
@@ -43,15 +37,19 @@
       </div>
     </section>
 
-    <section>
-
-      <h3>Blog</h3>
-      {% for blog in blogs %}
-
-        <p>{{ blog.title }}</p>
-
-      {% endfor %}
-
-    </section>
+      <section class="features-icons">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              {% for blog in blogs %}
+              <div class="mx-auto mb-3 mb-lg-0 mb-lg-3">
+                <h5><a href="{% url 'post_detail' blog.slug %}">{{ blog.title }}</a></h5>
+                <h6>{{ blog.date }}</h6>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
 
 {% endblock %}
