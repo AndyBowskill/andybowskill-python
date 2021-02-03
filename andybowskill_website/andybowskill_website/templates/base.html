@@ -6,8 +6,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Andy Bowskill | Software Developer | South-West, UK">
+    <meta name="author" content="Andy Bowskill">
   
     <title>Andy Bowskill</title>
   
@@ -15,10 +15,9 @@
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   
     <!-- Custom fonts for this template -->
-    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="{% static 'css/landing-page.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/landing-page-custom.css' %}" rel="stylesheet">
@@ -31,6 +30,8 @@
 
   {% block content %}
   {% endblock %}
+
+  {% include 'footer.html' %}
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
