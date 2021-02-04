@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import Blog
 
-import markdown
-
 def index(request):
     blogs = Blog.blogs.all()
     context = {
