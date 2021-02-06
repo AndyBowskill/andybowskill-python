@@ -6,7 +6,7 @@ x-service-volumes: &service-volumes
 services:
   website:
     image: andybowskill_website:latest
-    command: python andybowskill_website/manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes: *service-volumes
     depends_on:
       - db_migrate
@@ -15,5 +15,5 @@ services:
 
   db_migrate:
     image: andybowskill_website:latest
-    command: python andybowskill_website/manage.py migrate
+    command: python manage.py migrate
     volumes: *service-volumes

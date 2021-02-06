@@ -1,1 +1,1 @@
-web: gunicorn andybowskill_website.andybowskill_website.wsgi --log-file -
+web: gunicorn andybowskill_website.wsgi --log-file -
