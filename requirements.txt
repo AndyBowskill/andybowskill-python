@@ -3,3 +3,5 @@ gunicorn
 django-heroku
 whitenoise
 markdown
+psycopg2-binary
+psycopg2
