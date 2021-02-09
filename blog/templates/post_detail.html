@@ -12,7 +12,13 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 offset-lg-2">
-                <h5>{{ blog.title }} | {{ blog.date }}</h5>
+                <h4>{{ blog.title }}</h4>
+            </div>
+            <div class="col-lg-8 offset-lg-2">
+              <h6>{{ blog.date }}</h6>
+            </div>
+            <div class="col-lg-8 offset-lg-2">
+              <hr />
             </div>
             <div class="col-lg-8 offset-lg-2">
                 {{ blog.content | markdown | safe }}                    
