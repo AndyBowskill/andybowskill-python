@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Blog
+
+from blog.models import Blog
 
 def index(request):
     blogs = Blog.blogs.all()
