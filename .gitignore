@@ -131,3 +131,6 @@ dmypy.json
 # Apple Mac directory
 .DS_Store
 /.DS_Store
+
+# Test results
+test-results/

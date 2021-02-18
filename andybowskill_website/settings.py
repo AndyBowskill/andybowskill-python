@@ -82,29 +82,29 @@ SECURE_SSL_REDIRECT = True
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# Postgres database
-POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
-POSTGRES_DB= os.environ.get('POSTGRES_DB', default="postgres")
-POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
-POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': POSTGRES_DB,
-        'USER': POSTGRES_USER,
-        'PASSWORD': POSTGRES_PASSWORD,
-        'HOST': POSTGRES_HOST,
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Postgres database
+# POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
+# POSTGRES_DB= os.environ.get('POSTGRES_DB', default="postgres")
+# POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
+# POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': POSTGRES_DB,
+#         'USER': POSTGRES_USER,
+#         'PASSWORD': POSTGRES_PASSWORD,
+#         'HOST': POSTGRES_HOST,
+#         'PORT': 5432,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
