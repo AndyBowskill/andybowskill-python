@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="blog.tests.BlogModelTest-20210218135917" tests="1" file="blog/tests.py" time="0.002" timestamp="2021-02-18T13:59:17" failures="0" errors="0" skipped="0">
+	<testcase classname="blog.tests.BlogModelTest" name="test_title_max_length" time="0.002" timestamp="2021-02-18T13:59:17" file="blog/tests.py" line="11"/>
+</testsuite>
