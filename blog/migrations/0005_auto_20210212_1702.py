@@ -6,13 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0004_auto_20210212_1624'),
+        ("blog", "0004_auto_20210212_1624"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='myblog',
-            managers=[
-            ],
+            name="myblog",
+            managers=[],
         ),
     ]

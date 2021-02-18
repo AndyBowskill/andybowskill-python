@@ -8,21 +8,20 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Blog',
+            name="Blog",
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('slug', models.SlugField(default='')),
-                ('title', models.TextField()),
-                ('date', models.DateField()),
-                ('content', models.TextField()),
+                ("id", models.IntegerField(primary_key=True, serialize=False)),
+                ("slug", models.SlugField(default="")),
+                ("title", models.TextField()),
+                ("date", models.DateField()),
+                ("content", models.TextField()),
             ],
             managers=[
-                ('blogs', django.db.models.manager.Manager()),
+                ("blogs", django.db.models.manager.Manager()),
             ],
         ),
     ]

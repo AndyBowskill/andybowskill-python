@@ -7,24 +7,24 @@ import django.db.models.manager
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0005_auto_20210212_1702'),
+        ("blog", "0005_auto_20210212_1702"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Blog',
+            name="Blog",
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('slug', models.SlugField(default='')),
-                ('title', models.TextField(max_length=100)),
-                ('date', models.DateField()),
-                ('content', models.TextField()),
+                ("id", models.IntegerField(primary_key=True, serialize=False)),
+                ("slug", models.SlugField(default="")),
+                ("title", models.TextField(max_length=100)),
+                ("date", models.DateField()),
+                ("content", models.TextField()),
             ],
             managers=[
-                ('blogs', django.db.models.manager.Manager()),
+                ("blogs", django.db.models.manager.Manager()),
             ],
         ),
         migrations.DeleteModel(
-            name='MyBlog',
+            name="MyBlog",
         ),
     ]

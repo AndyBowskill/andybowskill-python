@@ -7,14 +7,14 @@ import django.db.models.manager
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0003_auto_20210212_1622'),
+        ("blog", "0003_auto_20210212_1622"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='myblog',
+            name="myblog",
             managers=[
-                ('myblogs', django.db.models.manager.Manager()),
+                ("myblogs", django.db.models.manager.Manager()),
             ],
         ),
     ]
