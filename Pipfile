@@ -28,6 +28,7 @@ Markdown = "==3.3.3"
 Markdown-Editor = "==1.0.4"
 Pygments = "==2.7.4"
 unittest-xml-reporting = "*"
+python-decouple = "*"
 
 [dev-packages]
 

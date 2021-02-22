@@ -14,6 +14,7 @@ import os
 import django_heroku
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "!&l77dbnf8x^(il(8gqqbp531#fcwpm@5n+mdp*wxsv4szi*u^"
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -81,29 +82,30 @@ SECURE_SSL_REDIRECT = True
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
+    POSTGRES_DB= os.environ.get('POSTGRES_DB', default="postgres")
+    POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
+    POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
 
-# Postgres database
-# POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
-# POSTGRES_DB= os.environ.get('POSTGRES_DB', default="postgres")
-# POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
-# POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': POSTGRES_DB,
+            'USER': POSTGRES_USER,
+            'PASSWORD': POSTGRES_PASSWORD,
+            'HOST': POSTGRES_HOST,
+            'PORT': 5432,
+        }
+    }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': POSTGRES_DB,
-#         'USER': POSTGRES_USER,
-#         'PASSWORD': POSTGRES_PASSWORD,
-#         'HOST': POSTGRES_HOST,
-#         'PORT': 5432,
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

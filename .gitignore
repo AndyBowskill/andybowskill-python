@@ -61,6 +61,8 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+staticfiles
+
 # Flask stuff:
 instance/
 .webassets-cache
@@ -131,3 +133,11 @@ dmypy.json
 # Apple Mac directory
 .DS_Store
 /.DS_Store
+
+# VS Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+**/.history
