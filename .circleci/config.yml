@@ -16,10 +16,10 @@ jobs:
     steps:
       - checkout
       - python/install-packages
-      - run: python manage.py collectstatic --no-input
       - run:
           name: Run django tests
           command: |
+            pipenv run python manage.py collectstatic --no-input
             pipenv run python manage.py test
       - store_test_results:
           path: test-results
