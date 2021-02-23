@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="blog.tests.test_models.BlogModelTest-20210218163211" tests="2" file="blog/tests/test_models.py" time="0.002" timestamp="2021-02-18T16:32:11" failures="0" errors="0" skipped="0">
-	<testcase classname="blog.tests.test_models.BlogModelTest" name="test_id_primary_key_is_true" time="0.002" timestamp="2021-02-18T16:32:11" file="blog/tests/test_models.py" line="11"/>
-	<testcase classname="blog.tests.test_models.BlogModelTest" name="test_title_max_length" time="0.000" timestamp="2021-02-18T16:32:11" file="blog/tests/test_models.py" line="16"/>
-</testsuite>
