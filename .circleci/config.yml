@@ -16,6 +16,7 @@ jobs:
     steps:
       - checkout
       - python/install-packages
+      - run: python manage.py collectstatic --no-input
       - run:
           name: Run django tests
           command: |
