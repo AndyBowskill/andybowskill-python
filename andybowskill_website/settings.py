@@ -24,10 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default="!&l77dbnf8x^(il(8gqqbp531#fcwpm@5n+mdp*wxsv4szi*u^")
+SECRET_KEY = config(
+    "SECRET_KEY", default="!&l77dbnf8x^(il(8gqqbp531#fcwpm@5n+mdp*wxsv4szi*u^"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -90,19 +92,19 @@ if DEBUG:
         }
     }
 else:
-    POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
-    POSTGRES_DB= os.environ.get('POSTGRES_DB', default="postgres")
-    POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
-    POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
+    POSTGRES_HOST = os.environ.get("POSTGRES_HOST", default="")
+    POSTGRES_DB = os.environ.get("POSTGRES_DB", default="postgres")
+    POSTGRES_USER = os.environ.get("POSTGRES_USER", default="")
+    POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", default="")
 
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': POSTGRES_DB,
-            'USER': POSTGRES_USER,
-            'PASSWORD': POSTGRES_PASSWORD,
-            'HOST': POSTGRES_HOST,
-            'PORT': 5432,
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": POSTGRES_DB,
+            "USER": POSTGRES_USER,
+            "PASSWORD": POSTGRES_PASSWORD,
+            "HOST": POSTGRES_HOST,
+            "PORT": 5432,
         }
     }
 

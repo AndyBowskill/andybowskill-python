@@ -31,6 +31,8 @@ unittest-xml-reporting = "*"
 python-decouple = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.9"
