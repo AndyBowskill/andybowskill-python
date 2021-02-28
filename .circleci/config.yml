@@ -20,7 +20,7 @@ jobs:
           name: Run django tests
           command: |
             pipenv run python manage.py collectstatic --no-input
-            pipenv run python manage.py test
+            pipenv run python -m pytest
       - store_test_results:
           path: test-results
       - store_artifacts:
