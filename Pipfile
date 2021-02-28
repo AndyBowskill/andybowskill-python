@@ -29,10 +29,10 @@ Markdown-Editor = "==1.0.4"
 Pygments = "==2.7.4"
 unittest-xml-reporting = "*"
 python-decouple = "*"
-
-[dev-packages]
 pytest = "*"
 pytest-django = "*"
+
+[dev-packages]
 
 [requires]
 python_version = "3.9"
