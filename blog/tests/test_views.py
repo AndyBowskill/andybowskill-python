@@ -10,6 +10,7 @@ from blog.models import Blog
 @pytest.fixture
 def setup_test_data():
     ident = 998
+
     for blog_number in range(3):
         Blog.blogs.create(
             id=ident + blog_number,
@@ -22,7 +23,6 @@ def setup_test_data():
 
 @pytest.mark.django_db
 class TestBlogView:
-
     def setup_test_variables(self):
         self.factory = RequestFactory()
 
