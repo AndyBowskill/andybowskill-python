@@ -25,7 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
 
     <link href="{% static 'css/customstyle.min.css' %}" rel="stylesheet">
-  
+
+    <link rel="stylesheet" title="Mono Blue" href="{% static 'css/mono-blue.min.css' %}">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 </head>
 
 <body>
@@ -37,11 +41,9 @@
 
   {% include 'footer.html' %}
 
-  <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-70828012-2', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
