@@ -28,7 +28,7 @@ class TestBlogModel:
     def test_slug_max_length(self, setup_test_data):
         blog = setup_test_data
         max_length = blog._meta.get_field("slug").max_length
-        assert max_length == 50
+        assert max_length == 100
 
     def test_slug_default_is_blank(self, setup_test_data):
         blog = setup_test_data
