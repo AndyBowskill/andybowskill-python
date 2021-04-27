@@ -151,10 +151,4 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 
-# Test runner
-TEST_RUNNER = "xmlrunner.extra.djangotestrunner.XMLTestRunner"
-TEST_OUTPUT_VERBOSE = 2
-TEST_OUTPUT_DIR = "test-results"
-
-
 django_heroku.settings(locals())
