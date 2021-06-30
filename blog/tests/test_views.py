@@ -15,14 +15,14 @@ class TestBlogView(TestCase):
         )
 
     def test_index_status_code_succeeded(self):
-        response = self.client.get("/")
+        response = self.client.get("/", secure=True)
         self.assertEqual(response.status_code, 200)
         self.assertContains(
             response,
             "I'm Andy, a software developer with 15 plus years of real-life experience.",
         )
 
-    def test_post_detail_status_code_succeeded(self):
+    def test_post_detail_status_code_succeeded(self, secure=True):
         response = self.client.get("/post/testing-blog-1/")
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Testing blog 1")
