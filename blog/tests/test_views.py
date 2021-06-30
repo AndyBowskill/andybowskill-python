@@ -22,7 +22,7 @@ class TestBlogView(TestCase):
             "I'm Andy, a software developer with 15 plus years of real-life experience.",
         )
 
-    def test_post_detail_status_code_succeeded(self, secure=True):
-        response = self.client.get("/post/testing-blog-1/")
+    def test_post_detail_status_code_succeeded(self:
+        response = self.client.get("/post/testing-blog-1/", secure=True)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Testing blog 1")
