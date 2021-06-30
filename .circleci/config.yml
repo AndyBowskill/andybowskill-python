@@ -19,4 +19,4 @@ jobs:
           name: Run django tests
           command: |
             pipenv run python manage.py collectstatic --no-input
-            pipenv run python -m pytest
+            pipenv run python manage.py test
